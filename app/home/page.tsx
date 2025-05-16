@@ -17,6 +17,9 @@ import { Globe } from '@/components/magicui/globe';
 import { Pinyon_Script } from 'next/font/google';
 import { Lora } from 'next/font/google';
 import ProjectPage from '../projects/page';
+import Aboutpage from '../about/page';
+import { MacbookScroll } from '@/components/ui/macbook-scroll';
+import { Badge } from 'lucide-react';
 
 const pinyon = Pinyon_Script({
     subsets: ['latin'],
@@ -71,21 +74,36 @@ const Home = () => {
 
                 <div className='grid grid-col-1 justify-center'>
                     <br />
-                    <h1 className={`text-[60px] ${lora.className}`}>
+                    <h1 className={`text-center text-[60px] ${lora.className}`}>
                         I help turn ideas
                     </h1>
                     <br />
                     <h2 className={`text-[60px] ${lora.className}`}>
-                        into seamless <span className={`text-5xl text-purple-500 ${pinyon.className}`}>Experiences</span>
+                        into seamless <span className={`text-[60px] text-purple-500 ${pinyon.className}`}>Experiences</span>
                     </h2>
                 </div>
 
-                <div className='relative'>
-                    <Globe className=' bottom-52' />
-                </div>
+                <MacbookScroll
+                    title={
+                        <span>
+                            Little preview of my work .
+                        </span>
+                    }
+                    badge={
+                        <a href="https://github.com/ParthibanPillay">
+                            <Badge className="h-10 w-10 transform -rotate-12" />
+                        </a>
+                    }
+                    src={`/github_pic.png`}
+                    showGradient={false}
+                />
 
-                <ProjectPage/>
-            </div>
+            {/*project section*/}
+            <ProjectPage />
+
+            {/*about me section*/}
+            <Aboutpage />
+        </div >
         </>
     );
 }

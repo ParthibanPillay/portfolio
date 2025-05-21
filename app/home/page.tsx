@@ -20,6 +20,7 @@ import ProjectPage from '../projects/page';
 import Aboutpage from '../about/page';
 import { MacbookScroll } from '@/components/ui/macbook-scroll';
 import { Badge } from 'lucide-react';
+import Navbar from '@/components/Navbar';
 
 const pinyon = Pinyon_Script({
     subsets: ['latin'],
@@ -41,48 +42,21 @@ const Home = () => {
         <>
             <div className="h-full w-full text-5xl">
                 <Meteors number={30} />
-                <nav className='flex items-center justify-around border'>
-                    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                        PSP
-                    </h2>
-                    <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <Link href="/projects" passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        My Work
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <Link href="/about" passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        About Me
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <Link href="/contact" passHref>
-                                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                        Connect
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
-                </nav>
 
-                <div className='grid grid-col-1 justify-center'>
+                {/* navbar component */}
+                <Navbar/>
+
+                <div className='grid grid-col-1 justify-center mt-10'>
                     <br />
                     <h1 className={`text-center text-[60px] ${lora.className}`}>
-                        I help turn ideas
+                        "Fueled by Coffee.
                     </h1>
                     <br />
                     <h2 className={`text-[60px] ${lora.className}`}>
-                        into seamless <span className={`text-[60px] text-purple-500 ${pinyon.className}`}>Experiences</span>
+                        Driven by Design. Powered by <span className={`text-[60px] text-purple-500 ${pinyon.className}`}>Code</span>.
                     </h2>
                 </div>
-
+                {/* macbook model */}
                 <MacbookScroll
                     title={
                         <span>
@@ -98,12 +72,13 @@ const Home = () => {
                     showGradient={false}
                 />
 
-            {/*project section*/}
-            <ProjectPage />
 
-            {/*about me section*/}
-            <Aboutpage />
-        </div >
+                {/*project section*/}
+                <ProjectPage />
+
+                {/*about me section*/}
+                <Aboutpage />
+            </div >
         </>
     );
 }

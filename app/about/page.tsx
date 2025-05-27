@@ -25,10 +25,12 @@ const Aboutpage = () => {
         <h1 className={`${lora.className}`}>About<span className={`text-[70px] text-purple-500 ${pinyon.className}`}> me</span>
         </h1>
         <div className='grid grid-cols-2 min-h-screen mt-20 ml-20'>
-          <p className={`text-start ${lora.className}`}>
+          <p className={`text-start ${lora.className} text-3xl mt-40`}>
             I'm a passionate and curious developer with a strong interest in building practical and creative solutions through code. I enjoy exploring new technologies, learning continuously, and working on projects that solve real-world problems. With a solid foundation in computer science and hands-on experience in full-stack development, I'm always eager to contribute, collaborate, and grow in the tech world.
           </p>
           <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+
+            {/*orbit component*/}
             <OrbitingCircles iconSize={40}>
               <Icons.whatsapp />
               <Icons.notion />

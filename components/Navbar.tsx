@@ -16,17 +16,17 @@ const Navbar = () => {
     return (
         <nav className='flex items-center justify-around p-10 text-5xl'>
             <Image
-            width={120}
-            height={120}
-            src={logo}
-            alt='logo image'
+                width={120}
+                height={120}
+                src={logo}
+                alt='logo image'
             />
             <NavigationMenu>
                 <NavigationMenuList className='gap-10'>
                     <NavigationMenuItem>
                         <Link href="/projects" passHref>
                             <NavigationMenuLink className={`${lora.className} cursor-none text-3xl`}>
-                                My Work
+                                    my work
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

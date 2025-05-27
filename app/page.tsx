@@ -52,9 +52,9 @@ export default function Home() {
           click the button below to start
         </TypingAnimation>
 
-        <AnimatedSpan delay={8000} className="text-green-500">
+        <AnimatedSpan delay={8000} className="text-green-500 cursor-none">
           <Link href="/home">
-            <RippleButton className="w-full border-white text-white" rippleColor="#ADD8E6">Start</RippleButton>
+            <RippleButton className="w-full border-white text-white cursor-none" rippleColor="#ADD8E6">Start</RippleButton>
           </Link>
         </AnimatedSpan>
       </Terminal>

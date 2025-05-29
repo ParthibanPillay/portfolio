@@ -21,6 +21,7 @@ import Aboutpage from '../about/page';
 import { MacbookScroll } from '@/components/ui/macbook-scroll';
 import { Badge } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import ContactPage from '../contact/page';
 
 const pinyon = Pinyon_Script({
     subsets: ['latin'],
@@ -57,7 +58,7 @@ const Home = () => {
                     </h2>
                 </div>
                 {/* macbook model */}
-                <MacbookScroll
+                {/* <MacbookScroll
                     title={
                         <span>
                             Little preview of my work .
@@ -70,7 +71,7 @@ const Home = () => {
                     }
                     src={`/github_pic.png`}
                     showGradient={false}
-                />
+                /> */}
 
 
                 {/*project section*/}
@@ -78,6 +79,9 @@ const Home = () => {
 
                 {/*about me section*/}
                 <Aboutpage />
+
+                {/*contact me section */}
+                <ContactPage/>
             </div >
         </>
     );

@@ -1,3 +1,4 @@
+import { RippleButton } from '@/components/magicui/ripple-button';
 import React from 'react'
 
 const ContactPage = () => {
@@ -9,8 +10,9 @@ const ContactPage = () => {
                     Want to chat? Just shoot me a dm with a direct question on twitter and I'll respond whenever I can. I will ignore all soliciting.
                 </p>
             </div>
+            <RippleButton>Get in touch</RippleButton>
         </div>
     )
 }
 
-export default ContactPage
+export default ContactPage;

@@ -38,14 +38,14 @@ const projects = [
 
 const ProjectPage = () => {
   return (
-    <div className=''>
+    <div>
       <div className={`text-center ${pinyon.className} text-[100px] mt-10`}>
         my <AuroraText>work</AuroraText>
       </div>
       <div className='mt-0 h-[40rem] w-full flex items-center justify-center gap-x-50'>
         {projects.map((list) => (
           <PinContainer title={list.title} className={`${lora.className} grid  h-[25rem] text-2xl w-[30rem] cursor-none gap-y-5`}>
-            <h1 className='text-2xl'>{list.title}</h1>
+            <h1 className='text-2xl text-center'>{list.title}</h1>
             <p className='text-[20px]'>{list.desc}</p>
             <Image alt='container-images' src={list.img} width={1000} height={1000} />
           </PinContainer>

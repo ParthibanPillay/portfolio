@@ -3,6 +3,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { Pinyon_Script, Lora } from 'next/font/google';
 import { PinContainer } from '@/components/ui/3d-pin';
 import Image from "next/image";
+import { Link, Element } from 'react-scroll';
 
 const pinyon = Pinyon_Script({
   subsets: ['latin'],
@@ -38,7 +39,7 @@ const projects = [
 
 const ProjectPage = () => {
   return (
-    <div>
+    <Element name='section1'>
       <div className={`text-center ${pinyon.className} text-[100px] mt-10`}>
         my <AuroraText>work</AuroraText>
       </div>
@@ -51,7 +52,7 @@ const ProjectPage = () => {
           </PinContainer>
         ))}
       </div>
-    </div>
+    </Element>
   )
 }
 

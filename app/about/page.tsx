@@ -2,7 +2,8 @@ import { OrbitingCircles } from '@/components/magicui/orbiting-circles'
 import { Icons } from "@/lib/Icons";
 import { Pinyon_Script } from 'next/font/google';
 import { Lora } from 'next/font/google';
-import React from 'react'
+import React from 'react';
+import { Link, Element } from 'react-scroll';
 
 const pinyon = Pinyon_Script({
   subsets: ['latin'],
@@ -20,8 +21,8 @@ const lora = Lora({
 
 const Aboutpage = () => {
   return (
-    <>
-      <div className='text-center'>
+    <Element name='section2'>
+      <div className='text-center mt-20'>
         <h1 className={`${lora.className}`}>About<span className={`text-[70px] text-purple-500 ${pinyon.className}`}> me</span>
         </h1>
         <div className='grid grid-cols-2 min-h-screen mt-20 ml-20'>
@@ -47,7 +48,7 @@ const Aboutpage = () => {
           </div>
         </div>
       </div>
-    </>
+    </Element>
   )
 }
 

@@ -45,7 +45,7 @@ const Home = () => {
                 <Meteors number={30} />
 
                 {/* navbar component */}
-                <Navbar/>
+                <Navbar />
 
                 <div className='grid grid-col-1 justify-center mt-10'>
                     <br />
@@ -58,20 +58,22 @@ const Home = () => {
                     </h2>
                 </div>
                 {/* macbook model */}
-                {/* <MacbookScroll
-                    title={
-                        <span>
-                            Little preview of my work .
-                        </span>
-                    }
-                    badge={
-                        <a href="https://github.com/ParthibanPillay">
-                            <Badge className="h-10 w-10 transform -rotate-12" />
-                        </a>
-                    }
-                    src={`/github_pic.png`}
-                    showGradient={false}
-                /> */}
+                <div className='overflow-hidden'>
+                    <MacbookScroll
+                        title={
+                            <span>
+                                Little preview of my work .
+                            </span>
+                        }
+                        badge={
+                            <a href="https://github.com/ParthibanPillay">
+                                <Badge className="h-10 w-10 transform -rotate-12" />
+                            </a>
+                        }
+                        src={`/github_pic.png`}
+                        showGradient={false}
+                    />
+                </div>
 
 
                 {/*project section*/}
@@ -81,7 +83,7 @@ const Home = () => {
                 <Aboutpage />
 
                 {/*contact me section */}
-                <ContactPage/>
+                <ContactPage />
             </div >
         </>
     );

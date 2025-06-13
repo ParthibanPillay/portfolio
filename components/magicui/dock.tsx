@@ -14,6 +14,7 @@ import React, { PropsWithChildren, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
+  mouseX: MotionValue<number>;
   className?: string;
   iconSize?: number;
   iconMagnification?: number;
@@ -33,6 +34,7 @@ const dockVariants = cva(
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
     {
+      mouseX,
       className,
       children,
       iconSize = DEFAULT_SIZE,
@@ -43,13 +45,11 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     },
     ref,
   ) => {
-    const mouseX = useMotionValue(Infinity);
-
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
-          return React.cloneElement(child, {
-            ...child.props,
+          return React.cloneElement(child as React.ReactElement<any>, {
+            ...(child.props as object),
             mouseX: mouseX,
             size: iconSize,
             magnification: iconMagnification,

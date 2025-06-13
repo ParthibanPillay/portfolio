@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from './ui/navigation-menu';
-import { Link, Element } from 'react-scroll';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './ui/navigation-menu';
+import { Link } from 'react-scroll';
 import { Lora } from 'next/font/google';
 import Image from 'next/image';
 import logo from "@/public/logo.png";
@@ -24,25 +24,19 @@ const Navbar = () => {
             <NavigationMenu>
                 <NavigationMenuList className='gap-10'>
                     <NavigationMenuItem>
-                        <Link to="section1" smooth={true}>
-                            <NavigationMenuLink className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
+                            <NavigationMenuLink href='section1' className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
                                     my work
                             </NavigationMenuLink>
-                        </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link to='section2' smooth={true}>
-                            <NavigationMenuLink className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
+                            <NavigationMenuLink href='section2' className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
                                 About Me
                             </NavigationMenuLink>
-                        </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link to='section3' smooth={true}>
-                            <NavigationMenuLink className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
+                            <NavigationMenuLink href='section3' className={`${lora.className} cursor-none text-3xl hover:text-purple-500`}>
                                 Connect
                             </NavigationMenuLink>
-                        </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>

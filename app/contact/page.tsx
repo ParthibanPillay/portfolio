@@ -1,9 +1,7 @@
-import { RippleButton } from '@/components/magicui/ripple-button';
-import React from 'react'
-import { AuroraText } from "@/components/magicui/aurora-text"
+import { AuroraText } from "@/components/magicui/aurora-text";
 import { Pinyon_Script, Lora } from 'next/font/google';
 import { Button } from '@/components/ui/button';
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import { Input } from '@/components/ui/input';
 
 const pinyon = Pinyon_Script({
@@ -19,6 +17,10 @@ const lora = Lora({
     variable: '--font-lora',
     display: 'swap',
 });
+
+console.log('Button:', Button);
+console.log('Input:', Input);
+console.log('AuroraText:', AuroraText);
 
 const ContactPage = () => {
     return (

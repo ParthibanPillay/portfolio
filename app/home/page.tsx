@@ -1,19 +1,6 @@
 "use client";
 import { Meteors } from '@/components/magicui/meteors';
 import React from 'react'
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-    NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import Link from 'next/link';
-import { Globe } from '@/components/magicui/globe';
 import { Pinyon_Script } from 'next/font/google';
 import { Lora } from 'next/font/google';
 import ProjectPage from '../projects/page';
@@ -22,6 +9,7 @@ import { MacbookScroll } from '@/components/ui/macbook-scroll';
 import { Badge } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ContactPage from '../contact/page';
+import Test from '@/components/Test';
 
 const pinyon = Pinyon_Script({
     subsets: ['latin'],
@@ -50,7 +38,7 @@ const Home = () => {
                 <div className='grid grid-col-1 justify-center mt-10'>
                     <br />
                     <h1 className={`text-center text-[60px] ${lora.className}`}>
-                        "Fueled by Coffee.
+                        {"'"}Fueled by Coffee.
                     </h1>
                     <br />
                     <h2 className={`text-[60px] ${lora.className}`}>
@@ -70,7 +58,7 @@ const Home = () => {
                                 <Badge className="h-10 w-10 transform -rotate-12" />
                             </a>
                         }
-                        src={`/github_pic.png`}
+                        // src={`/github_pic.png`}
                         showGradient={false}
                     />
                 </div>
